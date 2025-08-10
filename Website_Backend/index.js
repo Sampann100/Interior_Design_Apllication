@@ -16,7 +16,7 @@ const app = express();
 
 //Cors middleware
 const allowedOrigins = [
-  "http://localhost:5173",
+  "https://interior-design-apllication-fronten.vercel.app",
 ];
 
 app.use(
