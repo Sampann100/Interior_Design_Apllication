@@ -1,0 +1,258 @@
+/* ===== Fixed Header ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+}
+
+/* Shadow & blur when scrolled */
+.header.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.navbarCustom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.headingImage {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+.headingImage:hover {
+  transform: scale(1.05);
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navLink {
+  color: #2c2c2c;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #cd8f52;
+  transition: width 0.3s ease;
+}
+.navLink:hover::after,
+.navLink.active::after {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loginBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #cd8f52;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.loginBtn:hover {
+  background: #b67b45;
+  transform: translateY(-2px);
+}
+
+.userMenu {
+  position: relative;
+}
+.dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 240px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  animation: fadeIn 0.2s ease;
+}
+.dropdownHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+.userName {
+  font-weight: 600;
+  color: #2c2c2c;
+}
+.userEmail {
+  color: #666;
+}
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  color: #2c2c2c;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.dropdownItem:hover {
+  background: #f8f9fa;
+}
+.logoutBtn {
+  color: #dc3545;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+}
+.logoutBtn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+.cartBtn {
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: #2c2c2c;
+  transition: all 0.3s ease;
+}
+.cartBtn:hover {
+  background: #f8f9fa;
+}
+.cartBadge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #dc3545;
+  color: white;
+  border-radius: 999px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 991px) {
+  .navLinks {
+    display: none;
+  }
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #2c2c2c;
+}
+
+@media (max-width: 991px) {
+  .menuToggle {
+    display: block;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: white;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+    display: none;
+    animation: fadeIn 0.3s ease;
+    z-index: 999;
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .navLink {
+    padding: 0.75rem 1rem;
+    width: 100%;
+  }
+}
+
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  padding: 15px;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.mobileMenu.open {
+  display: flex;
+}
+
+.mobileActions {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobileActions button {
+  width: 100%;
+  justify-content: center;
+}

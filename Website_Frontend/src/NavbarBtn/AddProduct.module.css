@@ -1,0 +1,80 @@
+/* ===== Background ===== */
+.add-product-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f7f8fa, #e8ecf2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+/* ===== Glass Card ===== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Title ===== */
+.stylish-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* For non-webkit browsers fallback */
+  background-clip: text;
+  color: transparent;
+}
+
+/* ===== Inputs ===== */
+.modern-input {
+  border: 1px solid #e0e6ed;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.modern-input:focus {
+  border-color: #3a7bd5;
+  box-shadow: 0 0 0 4px rgba(58, 123, 213, 0.15);
+  outline: none;
+}
+
+/* Invalid field */
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+/* ===== Button ===== */
+.modern-btn {
+  background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.modern-btn:hover {
+  background: linear-gradient(90deg, #2f6bb0, #00b8e6);
+  transform: translateY(-1px);
+}
+
+/* ===== Label ===== */
+.form-label {
+  font-size: 0.92rem;
+  margin-bottom: 6px;
+  color: #333;
+}

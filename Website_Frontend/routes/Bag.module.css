@@ -1,0 +1,95 @@
+.bagPageWrapper {
+  margin-top: 4rem;
+  padding: 20px;
+  background: #fafafa;
+  min-height: 100vh;
+}
+
+.bagContainer {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.bagItems {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Smooth Fade-in Animation */
+.fadeIn {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bagSummary {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 3px 12px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 20px;
+}
+
+.summaryTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Empty Cart Section */
+.emptyCart {
+  background: white;
+  padding: 50px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 3px 12px rgba(0,0,0,0.05);
+}
+
+.emptyCartIcon {
+  width: 80px;
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
+
+.shopNowBtn {
+  margin-top: 18px;
+  padding: 12px 26px;
+  background: linear-gradient(135deg, #5b783e, #6e9e4e);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shopNowBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+@media screen and (max-width: 768px) {
+  .bagContainer {
+    flex-direction: column;
+  }
+  .bagSummary {
+    position: static;
+    width: 100%;
+  }
+}

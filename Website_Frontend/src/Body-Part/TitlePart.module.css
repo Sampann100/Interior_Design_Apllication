@@ -1,0 +1,76 @@
+.sqsrte {
+  color: rgb(58, 56, 58);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .sqsrte {
+    font-size: 2rem;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .sqsrte {
+    font-size: 1.5rem;
+  }
+}
+
+
+.para {
+  font-size: 1.1rem;
+  font-weight: 450;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .para {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .para {
+    font-size: 0.95rem;
+  }
+}
+
+.boxImage11 {
+  height: auto;
+  width: 100%;
+  max-width: 700px;
+}
+
+.boxImage12 {
+  height: auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Utility cleanup: convert margin/positioning to Bootstrap grid or utility classes */
+.designTitle {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: oblique;
+  margin-top: 2rem;
+}
+
+.elegant {
+  margin-top: 1rem;
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+.CallButton {
+  background-color: black;
+  color: white;
+  height: auto;
+  width: 100%;
+  max-width: 220px;
+  margin-top: 2rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+}

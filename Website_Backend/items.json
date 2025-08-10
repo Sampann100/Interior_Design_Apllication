@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "name": "Maison Moderne",
+      "imageUrl": "boxImage1.jpg",
+      "description": "A sleek, tempered glass coffee table with a minimalist metal frame, perfect for contemporary living spaces.",
+      "original_price": 3099,
+      "current_price": 499
+    },
+    {
+      "id": "2",
+      "name": "Prestige Spaces",
+      "imageUrl": "boxImage2.jpg",
+      "description": "Plush velvet upholstery with deep cushioning and elegant tufted details, adding sophistication to any room.",
+      "original_price": 3099,
+      "current_price": 499
+    },
+    {
+      "id": "3",
+      "name": "The Velvet Room",
+      "imageUrl": "boxImage3.jpg",
+      "description": "A sturdy metal and wood bookshelf with open shelving, ideal for modern and rustic interiors.",
+      "original_price": 3099,
+      "current_price": 499
+    },
+    {
+      "id": "4",
+      "name": "Signature Spaces",
+      "imageUrl": "boxImage4.jpg",
+      "description": "Handwoven rattan pendant light that creates a warm, natural ambiance in any space.",
+      "original_price": 3099,
+      "current_price": 499
+    },
+    {
+      "id": "5",
+      "name": "Nest & Nook",
+      "imageUrl": "boxImage5.jpg",
+      "description": "A stunning white marble tabletop with a solid wood base, offering a blend of luxury and durability.",
+      "original_price": 3099,
+      "current_price": 499
+    },
+    {
+      "id": "6",
+      "name": "Design District",
+      "imageUrl": "boxImage6.jpg",
+      "description": "Ergonomic wooden frame with soft fabric upholstery, designed for comfort and style in minimal spaces.",
+      "original_price": 3099,
+      "current_price": 499
+    },
+    {
+      "id": "7",
+      "name": "Natural Harmony",
+      "imageUrl": "boxImage7.jpg",
+      "description": "A modern, abstract-patterned rug with soft, durable fibers, perfect for adding texture and warmth.",
+      "original_price": 3099,
+      "current_price": 499
+    },
+    {
+      "id": "8",
+      "name": "Zenith Interiors",
+      "imageUrl": "boxImage8.jpg",
+      "description": "Sleek wooden shelves that provide stylish storage without taking up floor space.",
+      "original_price": 3099,
+      "current_price": 499
+    },
+    {
+      "id": "9",
+      "name": "Willow & Pine Interiors",
+      "imageUrl": "boxImage9.jpg",
+      "description": "A timeless brass-finished lamp with an adjustable arm for the perfect lighting angle.",
+      "original_price": 3099,
+      "current_price": 499
+    },
+    {
+      "id": "10",
+      "name": "Casa Verde Designs",
+      "imageUrl": "boxImage10.jpg",
+      "description": "A frameless, high-definition mirror that enhances light and space in any room.",
+      "original_price": 3099,
+      "current_price": 499
+    }
+  ]
+}

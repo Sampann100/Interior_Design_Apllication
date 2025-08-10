@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Build files
+frontend/build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+git add .gitignore
+git commit -m "Add .gitignore"
