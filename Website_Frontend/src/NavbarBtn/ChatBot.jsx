@@ -19,7 +19,7 @@ const Chatbot = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/chatbot",
+        "https://interior-design-apllication-backend.onrender.com/chatbot",
         { message: input },
         { withCredentials: true }
       );

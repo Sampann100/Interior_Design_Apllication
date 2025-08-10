@@ -21,14 +21,17 @@ const BagItem = ({ newitem }) => {
   // ...existing handleRemoveItemFromCart function...
   const handleRemoveItemFromCart = async (e, itemId) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/deleteCartItem", {
-      method: "POST",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ itemId }),
-    });
+    const res = await fetch(
+      "https://interior-design-apllication-backend.onrender.com/deleteCartItem",
+      {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ itemId }),
+      }
+    );
 
     if (res.ok) {
       dispatch(bagActions.removeFromBag(itemId));

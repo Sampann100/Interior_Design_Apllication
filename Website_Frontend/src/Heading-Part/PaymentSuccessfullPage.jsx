@@ -14,7 +14,7 @@ const PaymentSuccess = () => {
 
   useEffect(() => {
     const userDetailFunction = async () => {
-      const response = await axios.get("http://localhost:5000/userDetail", {
+      const response = await axios.get("https://interior-design-apllication-backend.onrender.com/userDetail", {
         withCredentials: true,
       });
 

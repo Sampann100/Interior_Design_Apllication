@@ -40,7 +40,7 @@ const LoginPage = () => {
 
     if (Email && Password) {
       try {
-        const response = await fetch("http://localhost:5000/login", {
+        const response = await fetch("https://interior-design-apllication-backend.onrender.com/login", {
           method: "POST",
           credentials: "include",
           headers: {

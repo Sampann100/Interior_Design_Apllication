@@ -26,7 +26,7 @@ export default function TitlePart() {
       return;
     }
 
-    fetch("http://localhost:5000/cart", {
+    fetch("https://interior-design-apllication-backend.onrender.com/cart", {
       method: "GET",
       credentials: "include",
     })
@@ -50,7 +50,7 @@ export default function TitlePart() {
         return;
       }
 
-      const response = await fetch("http://localhost:5000/cart", {
+      const response = await fetch("https://interior-design-apllication-backend.onrender.com/cart", {
         method: "POST",
         credentials: "include",
         headers: {
@@ -60,7 +60,7 @@ export default function TitlePart() {
       });
 
       if (response.ok) {
-        await fetch("http://localhost:5000/cart", {
+        await fetch("https://interior-design-apllication-backend.onrender.com/cart", {
           method: "GET",
           credentials: "include",
         })
@@ -80,7 +80,7 @@ export default function TitlePart() {
   //Remove From Cart
   const handleRemoveItemFromCart = async (e, itemId) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/deleteCartItem", {
+    const res = await fetch("https://interior-design-apllication-backend.onrender.com/deleteCartItem", {
       method: "POST",
       credentials: "include",
       headers: {
@@ -101,7 +101,7 @@ export default function TitlePart() {
   const handleDeleteSubmit = async (e, itemId) => {
     e.preventDefault();
     console.log("Deleting item with ID:", itemId);
-    const response = await fetch("http://localhost:5000/itemDelete", {
+    const response = await fetch("https://interior-design-apllication-backend.onrender.com/itemDelete", {
       method: "POST",
       credentials: "include",
       headers: {
@@ -110,7 +110,7 @@ export default function TitlePart() {
       body: JSON.stringify({ itemId }),
     });
     if (response.ok) {
-      await fetch("http://localhost:5000/items", {
+      await fetch("https://interior-design-apllication-backend.onrender.com/items", {
         credentials: "include",
       })
         .then((res) => res.json())

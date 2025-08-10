@@ -13,7 +13,7 @@ const CommentBox = () => {
     setSuccess(null);
 
     try {
-      const response = await fetch("http://localhost:5000/comment", {
+      const response = await fetch("https://interior-design-apllication-backend.onrender.com/comment", {
         method: "POST",
         credentials: "include",
         headers: {

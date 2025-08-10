@@ -12,14 +12,14 @@ const AddProduct = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
   const onSubmit = async (data) => {
-    const response = await fetch("http://localhost:5000/items", {
+    const response = await fetch("https://interior-design-apllication-backend.onrender.com/items", {
       method: "POST",
       credentials: "include",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
     });
 
-    const res = await fetch("http://localhost:5000/items", {
+    const res = await fetch("https://interior-design-apllication-backend.onrender.com/items", {
       credentials: "include",
     });
     const items = await res.json();

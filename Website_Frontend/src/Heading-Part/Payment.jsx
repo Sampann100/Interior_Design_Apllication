@@ -121,7 +121,7 @@ const Payment = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:5000/createOrder",
+        "https://interior-design-apllication-backend.onrender.com/createOrder",
         options,
         { withCredentials: true }
       );
@@ -144,14 +144,14 @@ const Payment = () => {
           };
 
           await axios
-            .post("http://localhost:5000/verifyPayment", options2, {
+            .post("https://interior-design-apllication-backend.onrender.com/verifyPayment", options2, {
               withCredentials: true,
             })
             .then(async (res) => {
               if (res.data.success) {
                 formData.paymentStatus = res.data.success;
                 await axios.post(
-                  "http://localhost:5000/savePaymentInfo",
+                  "https://interior-design-apllication-backend.onrender.com/savePaymentInfo",
                   formData,
                   {
                     withCredentials: true,

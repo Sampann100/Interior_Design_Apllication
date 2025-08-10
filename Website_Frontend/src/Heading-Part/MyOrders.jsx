@@ -25,7 +25,7 @@ const MyOrders = () => {
   useEffect(() => {
     const fetchOrderItem = async () => {
       const response = await axios.get(
-        "http://localhost:5000/orderPlacedItem",
+        "https://interior-design-apllication-backend.onrender.com/orderPlacedItem",
         { withCredentials: true }
       );
 

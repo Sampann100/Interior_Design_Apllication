@@ -13,7 +13,7 @@ const Bag = () => {
   const bagItems = useSelector((state) => state.bagItem);
 
   useEffect(() => {
-    fetch("http://localhost:5000/cart", {
+    fetch("https://interior-design-apllication-backend.onrender.com/cart", {
       credentials: "include",
     })
       .then((res) => {

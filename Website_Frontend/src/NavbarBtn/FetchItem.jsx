@@ -13,7 +13,7 @@ const FetchItem = () => {
     const controller = new AbortController();
     dispatch(fetctStatusAction.markFetchStarted());
 
-    fetch("http://localhost:5000/items", {
+    fetch("https://interior-design-apllication-backend.onrender.com/items", {
       signal: controller.signal,
       credentials: "include",
     })
@@ -43,7 +43,7 @@ const FetchItem = () => {
     const controller = new AbortController();
     dispatch(fetctStatusAction.markFetchStarted());
 
-    fetch("http://localhost:5000/", {
+    fetch("https://interior-design-apllication-backend.onrender.com/", {
       signal: controller.signal,
       credentials: "include",
     })

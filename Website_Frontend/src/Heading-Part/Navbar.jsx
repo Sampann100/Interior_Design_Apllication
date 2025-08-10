@@ -42,7 +42,7 @@ export default function Navbar() {
   const handleCartBtnClick = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.get("http://localhost:5000/cart", {
+      const res = await axios.get("https://interior-design-apllication-backend.onrender.com/cart", {
         withCredentials: true,
       });
       res.status === 200 ? navigate("/cart") : navigate("/login");
@@ -54,7 +54,7 @@ export default function Navbar() {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/logout",
+        "https://interior-design-apllication-backend.onrender.com/logout",
         {},
         { withCredentials: true }
       );

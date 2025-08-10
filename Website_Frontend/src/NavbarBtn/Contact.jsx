@@ -31,7 +31,7 @@ const Contact = () => {
     console.log(formData);
     try {
       const response = await fetch(
-        "http://localhost:5000/personalcontactdetail",
+        "https://interior-design-apllication-backend.onrender.com/personalcontactdetail",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
