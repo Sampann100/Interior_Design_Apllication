@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../config";
 
 const SignUpForm = () => {
   const [formData, setFormData] = useState({
@@ -61,7 +62,7 @@ const SignUpForm = () => {
 
     if (Username && Email && Password) {
       try {
-        const response = await fetch("https://interior-design-apllication-backend.onrender.com/signup", {
+        const response = await fetch(`${API_BASE_URL}/signup`, {
           method: "POST",
           credentials: "include",
           headers: {

@@ -5,6 +5,7 @@ import { FaCheckCircle, FaShoppingBag, FaReceipt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import axios from "axios";
 import { payedItemActions } from "../../store/payedItemSlice";
+import { API_BASE_URL } from "../config";
 
 const PaymentSuccess = () => {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ const PaymentSuccess = () => {
 
   useEffect(() => {
     const userDetailFunction = async () => {
-      const response = await axios.get("https://interior-design-apllication-backend.onrender.com/userDetail", {
+      const response = await axios.get(`${API_BASE_URL}/userDetail`, {
         withCredentials: true,
       });
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { FiCheck, FiAlertTriangle } from "react-icons/fi";
 import "react-toastify/dist/ReactToastify.css";
+import { API_BASE_URL } from "../config";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,7 +32,7 @@ const Contact = () => {
     console.log(formData);
     try {
       const response = await fetch(
-        "https://interior-design-apllication-backend.onrender.com/personalcontactdetail",
+        `${API_BASE_URL}/personalcontactdetail`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

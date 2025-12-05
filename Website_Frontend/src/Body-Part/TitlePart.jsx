@@ -7,6 +7,8 @@ import { bagActions } from "../../store/bagSlice";
 import { fetctStatusAction } from "../../store/fetchStatus";
 import { itemActions } from "../../store/itemSlice";
 import ChatBot from "./ChatBot";
+import { API_BASE_URL } from "../config";
+
 
 export default function TitlePart() {
   const items = useSelector((state) => state.items || []);
@@ -26,7 +28,7 @@ export default function TitlePart() {
       return;
     }
 
-    fetch("https://interior-design-apllication-backend.onrender.com/cart", {
+    fetch(`${API_BASE_URL}/cart`, {
       method: "GET",
       credentials: "include",
     })
@@ -50,7 +52,7 @@ export default function TitlePart() {
         return;
       }
 
-      const response = await fetch("https://interior-design-apllication-backend.onrender.com/cart", {
+      const response = await fetch(`${API_BASE_URL}/cart`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -60,7 +62,7 @@ export default function TitlePart() {
       });
 
       if (response.ok) {
-        await fetch("https://interior-design-apllication-backend.onrender.com/cart", {
+        await fetch(`${API_BASE_URL}/cart`, {
           method: "GET",
           credentials: "include",
         })
@@ -80,7 +82,7 @@ export default function TitlePart() {
   //Remove From Cart
   const handleRemoveItemFromCart = async (e, itemId) => {
     e.preventDefault();
-    const res = await fetch("https://interior-design-apllication-backend.onrender.com/deleteCartItem", {
+    const res = await fetch(`${API_BASE_URL}/deleteCartItem`, {
       method: "POST",
       credentials: "include",
       headers: {
@@ -101,7 +103,7 @@ export default function TitlePart() {
   const handleDeleteSubmit = async (e, itemId) => {
     e.preventDefault();
     console.log("Deleting item with ID:", itemId);
-    const response = await fetch("https://interior-design-apllication-backend.onrender.com/itemDelete", {
+    const response = await fetch(`${API_BASE_URL}/itemDelete`, {
       method: "POST",
       credentials: "include",
       headers: {
@@ -110,7 +112,7 @@ export default function TitlePart() {
       body: JSON.stringify({ itemId }),
     });
     if (response.ok) {
-      await fetch("https://interior-design-apllication-backend.onrender.com/items", {
+      await fetch(`${API_BASE_URL}/items`, {
         credentials: "include",
       })
         .then((res) => res.json())

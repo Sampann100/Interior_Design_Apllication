@@ -8,6 +8,7 @@ import style from "./BagItem.module.css";
 import { useDispatch } from "react-redux";
 import { bagActions } from "../../store/bagSlice";
 import { fetctStatusAction } from "../../store/fetchStatus";
+import { API_BASE_URL } from "../config";
 
 const BagItem = ({ newitem }) => {
   const item = newitem;
@@ -22,7 +23,7 @@ const BagItem = ({ newitem }) => {
   const handleRemoveItemFromCart = async (e, itemId) => {
     e.preventDefault();
     const res = await fetch(
-      "https://interior-design-apllication-backend.onrender.com/deleteCartItem",
+      `${API_BASE_URL}/deleteCartItem`,
       {
         method: "POST",
         credentials: "include",

@@ -16,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 import { Avatar } from "@mui/material";
 import { userDataAction } from "../../store/userDataSlice";
 import { bagActions } from "../../store/bagSlice";
+import { API_BASE_URL } from "../config";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ export default function Navbar() {
   const handleCartBtnClick = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.get("https://interior-design-apllication-backend.onrender.com/cart", {
+      const res = await axios.get(`${API_BASE_URL}/cart`, {
         withCredentials: true,
       });
       res.status === 200 ? navigate("/cart") : navigate("/login");
@@ -54,7 +55,7 @@ export default function Navbar() {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "https://interior-design-apllication-backend.onrender.com/logout",
+        `${API_BASE_URL}/logout`,
         {},
         { withCredentials: true }
       );

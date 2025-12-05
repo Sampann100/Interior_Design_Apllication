@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { IoSend } from "react-icons/io5";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { API_BASE_URL } from "../config";
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
@@ -19,7 +20,7 @@ const Chatbot = () => {
 
     try {
       const response = await axios.post(
-        "https://interior-design-apllication-backend.onrender.com/chatbot",
+        `${API_BASE_URL}/chatbot`,
         { message: input },
         { withCredentials: true }
       );

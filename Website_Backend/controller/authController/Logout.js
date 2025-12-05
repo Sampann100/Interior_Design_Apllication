@@ -3,7 +3,7 @@ exports.logout = (req, res, next) => {
     res.clearCookie("token", {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
+      sameSite: "none",
       path: '/'
     }).json({success: true, message: "Successfully logut!!"})
   } catch (err) {

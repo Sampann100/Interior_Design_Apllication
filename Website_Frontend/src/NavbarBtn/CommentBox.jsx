@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import { API_BASE_URL } from "../config";
 
 const CommentBox = () => {
   const { itemId } = useParams();
@@ -13,7 +14,7 @@ const CommentBox = () => {
     setSuccess(null);
 
     try {
-      const response = await fetch("https://interior-design-apllication-backend.onrender.com/comment", {
+      const response = await fetch(`${API_BASE_URL}/comment`, {
         method: "POST",
         credentials: "include",
         headers: {

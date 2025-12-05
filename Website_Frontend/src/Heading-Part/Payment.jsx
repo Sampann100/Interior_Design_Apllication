@@ -15,6 +15,7 @@ import {
 import { SiPhonepe } from "react-icons/si";
 import { useEffect } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../config";
 
 const Payment = () => {
   const navigate = useNavigate();
@@ -121,7 +122,7 @@ const Payment = () => {
       };
 
       const response = await axios.post(
-        "https://interior-design-apllication-backend.onrender.com/createOrder",
+        `${API_BASE_URL}/createOrder`,
         options,
         { withCredentials: true }
       );
@@ -144,14 +145,14 @@ const Payment = () => {
           };
 
           await axios
-            .post("https://interior-design-apllication-backend.onrender.com/verifyPayment", options2, {
+            .post(`${API_BASE_URL}/verifyPayment`, options2, {
               withCredentials: true,
             })
             .then(async (res) => {
               if (res.data.success) {
                 formData.paymentStatus = res.data.success;
                 await axios.post(
-                  "https://interior-design-apllication-backend.onrender.com/savePaymentInfo",
+                  `${API_BASE_URL}/savePaymentInfo`,
                   formData,
                   {
                     withCredentials: true,

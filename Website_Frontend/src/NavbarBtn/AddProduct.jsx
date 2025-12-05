@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { itemActions } from "../../store/itemSlice";
 import style from "./AddProduct.module.css";
+import { API_BASE_URL } from "../config";
 
 const AddProduct = () => {
   const dispatch = useDispatch();
@@ -12,14 +13,14 @@ const AddProduct = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
   const onSubmit = async (data) => {
-    const response = await fetch("https://interior-design-apllication-backend.onrender.com/items", {
+    const response = await fetch(`${API_BASE_URL}/items`, {
       method: "POST",
       credentials: "include",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
     });
 
-    const res = await fetch("https://interior-design-apllication-backend.onrender.com/items", {
+    const res = await fetch(`${API_BASE_URL}/items`, {
       credentials: "include",
     });
     const items = await res.json();

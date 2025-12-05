@@ -15,6 +15,7 @@ import {
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { API_BASE_URL } from "../config";
 
 const MyOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -25,7 +26,7 @@ const MyOrders = () => {
   useEffect(() => {
     const fetchOrderItem = async () => {
       const response = await axios.get(
-        "https://interior-design-apllication-backend.onrender.com/orderPlacedItem",
+        `${API_BASE_URL}/orderPlacedItem`,
         { withCredentials: true }
       );
 

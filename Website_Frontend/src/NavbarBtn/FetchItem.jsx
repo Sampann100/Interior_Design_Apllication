@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetctStatusAction } from "../../store/fetchStatus";
 import { itemActions } from "../../store/itemSlice";
 import { userDataAction } from "../../store/userDataSlice";
+import { API_BASE_URL } from "../config";
 
 const FetchItem = () => {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const FetchItem = () => {
     const controller = new AbortController();
     dispatch(fetctStatusAction.markFetchStarted());
 
-    fetch("https://interior-design-apllication-backend.onrender.com/items", {
+    fetch(`${API_BASE_URL}/items`, {
       signal: controller.signal,
       credentials: "include",
     })
@@ -43,7 +44,7 @@ const FetchItem = () => {
     const controller = new AbortController();
     dispatch(fetctStatusAction.markFetchStarted());
 
-    fetch("https://interior-design-apllication-backend.onrender.com/", {
+    fetch(`${API_BASE_URL}/`, {
       signal: controller.signal,
       credentials: "include",
     })
