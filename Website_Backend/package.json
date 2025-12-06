@@ -27,7 +27,8 @@
     "params": "^0.1.1",
     "razorpay": "^2.9.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "resend": "^6.5.2"
   },
   "keywords": [],
   "description": ""

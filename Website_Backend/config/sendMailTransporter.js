@@ -1,13 +1,17 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
-const transporter = nodemailer.createTransport({
-  host: "smtp-relay.brevo.com",
-  post: 587,
-  secure: false,
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default transporter;
+export const sendMail = async ({ to, subject, html }) => {
+  try {
+    const data = await resend.emails.send({
+      from: "Interior App <onboarding@resend.dev>",
+      to,
+      subject,
+      html,
+    });
+    return data;
+  } catch (err) {
+    console.error("Error sending email via Resend:", err);
+  }
+};
