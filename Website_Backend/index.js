@@ -16,6 +16,8 @@ const app = express();
 
 //Cors middleware
 const allowedOrigins = [
+  "https://interior-design-apllication-git-main-sampann-neemas-projects.vercel.app",
+  "https://interior-design-apllication.vercel.app",
   "http://localhost:5173",
 ];
 
